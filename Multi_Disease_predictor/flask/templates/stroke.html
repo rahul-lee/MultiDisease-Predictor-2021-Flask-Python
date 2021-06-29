@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Stroke Predictor</title>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Arimo"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Hind:300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style_stroke.css') }}"
+    />
+  </head>
+
+  <body>
+    <div class="login">
+      <h1>Stroke Predictor</h1>
+    </div>
+
+      <form action="{{ url_for('predictstroke')}}" method="post">
+        <label for="Gender">Gender:</label><br />
+        <select id="Gender" name="Gender">
+          <option value="1">Male</option>
+          <option value="0">Female</option></select
+        ><br /><br />
+
+        <!-- <p>0:Married ----- 1:Un Married -----</p> -->
+        <label for="Ever Married">Ever Married</label><br />
+        <select id="Ever Married" name="Ever Married">
+          <option value="1">Un Married</option>
+          <option value="0">Married</option></select
+        ><br /><br />
+
+        <!-- <p>0:Private ----- 1:Self Employed -----</p> -->
+        <label for="Work Style ">Work Style </label><br />
+        <select id="Work Style" name="Work Style">
+          <option value="1">Self Employed</option>
+          <option value="0">Private</option></select
+        ><br /><br />
+
+        <!-- <p>0:Urban ----- 1:Rural -----</p> -->
+        <label for="Residence Type">Residence Type</label><br />
+        <select id="Residence Type" name="Residence Type">
+          <option value="1">Rural</option>
+          <option value="0">Urban</option></select
+        ><br /><br />
+
+        <label for="Smoke">Smoke</label><br />
+        <select id="Smoke" name="Smoke">
+          <option value="1">Yes</option>
+          <option value="0">No</option></select
+        ><br /><br />
+
+        <label for="Age">Age</label><br />
+        <input
+          style="border: 1px solid black"
+          type="text"
+          name="Age"
+          placeholder="Age"
+          required="required"
+        /><br /><br />
+
+        <label for="HyperTension">HyperTension</label><br />
+        <select id="HyperTension" name="HyperTension">
+          <option value="1">Yes</option>
+          <option value="0">No</option></select
+        ><br /><br />
+
+        <label for="Heart Disease">Heart Disease</label><br />
+        <select id="Heart Disease" name="Heart Disease">
+          <option value="1">Yes</option>
+          <option value="0">No</option></select
+        ><br /><br />
+
+        <label for="Average Glucose">Average Glucose </label><br />
+        <input
+          style="border: 1px solid black"
+          class="form-"
+          type="text"
+          name="Average Glucose"
+          placeholder="Average Glucose Level"
+          required="required"
+        /><br /><br />
+
+        <label for="BMI">BMI</label><br />
+        <input
+          class="a"
+          style="border: 1px solid black"
+          type="text"
+          name="BMI"
+          placeholder="BMI"
+          required="required"
+        /><br /><br />
+      <div>
+        <button type="submit" class="btn btn-primary btn-block btn-large">
+          Predict
+        </button>
+      </form>
+      <br />
+      <br />
+      <strong style="color: blue">{{predicted}}</strong>
+      <br />
+      <br />
+      <a href="http://127.0.0.1:5000/">Go to Home Page</a>
+
+      <br />
+    </div>
+    <br />
+  </body>
+</html>

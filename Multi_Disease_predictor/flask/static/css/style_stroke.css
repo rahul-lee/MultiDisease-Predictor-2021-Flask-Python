@@ -1,0 +1,58 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+.btn:hover,
+.btn:active,
+.btn.active,
+.btn.disabled,
+.btn[disabled] {
+  background-color: #e6e6e6;
+}
+.btn-large {
+  line-height: normal;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.btn:hover {
+  color: #111010bb;
+  text-decoration: none;
+  background-color: #e6e6e6;
+
+  -webkit-transition: background-position 0.1s linear;
+  -moz-transition: background-position 0.1s linear;
+  -ms-transition: background-position 0.1s linear;
+  -o-transition: background-position 0.1s linear;
+  transition: background-position 0.1s linear;
+}
+.btn-primary,
+.btn-primary:hover {
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  color: #000000;
+}
+.btn-primary.active {
+  color: rgba(0, 0, 0, 0.75);
+}
+.btn-primary {
+  background-color: #2b6beb;
+  background-image: -moz-linear-gradient(top, #6eb6de, #4a77d4);
+  background-image: -ms-linear-gradient(top, #6eb6de, #4a77d4);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%);
+}
+.btn-primary:hover,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  filter: none;
+  background-color: #386bd3;
+}
+.btn-block {
+  display: block;
+}
+
+.login h1 {
+  color: rgb(61, 24, 228);
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  letter-spacing: 1px;
+  text-align: center;
+}

@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Kidney Disease Predictor</title>
+    
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Arimo"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Hind:300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style_kid.css') }}"
+    />
+
+  </head>
+
+  
+
+  <body>
+    <div class="login">
+      <h1>Kidney Disease Predictor</h1>
+
+      <form action="{{ url_for('predictkidney')}}" method="post">
+        <label for="Age">Age</label><br />
+        <input
+          style="border: 1px solid black"
+          class="form-control"
+          type="text"
+          name="Age"
+          placeholder="Age"
+          required="required"
+        />
+        <br><br>
+
+        <label for="Bp">Blood pressure </label><br />
+        <input
+          style="border: 1px solid black"
+          class="form-control"
+          type="text"
+          name="bp"
+          placeholder="Blood pressure"
+          required="required"
+        /><br><br>
+
+        <label for="BMI">Albumin</label><br />
+        <input
+          style="border: 1px solid black"
+          class="form-control"
+          type="text"
+          name="al"
+          placeholder="Albumin"
+          required="required"
+        /><br><br>
+
+        <label for="age">Sugar </label><br />
+        <input
+          style="border: 1px solid black"
+          class="form-control"
+          type="text"
+          name="su"
+          placeholder="Sugar"
+        /><br><br>
+
+        <label for="rbc">Red Blood Cells</label><br />
+        <input
+          style="border: 1px solid black"
+          class="form-control"
+          type="text"
+          name="rbc"
+          placeholder="RBC"
+        /><br><br>
+
+        <label for="pc">Pus Cells</label><br />
+        <input
+          style="border: 1px solid black"
+          class="form-control"
+          type="text"
+          name="pc"
+          placeholder="Pus Cells"
+        /><br><br>
+
+        <label for="pcc">Pus Cells Clumps</label><br />
+        <input
+          style="border: 1px solid black"
+          class="form-control"
+          type="text"
+          name="pcc"
+          placeholder="Pus Cells Clumps"
+        /><br><br>
+
+        <label for="ba">Bacteria</label><br />
+        <input
+          style="border: 1px solid black"
+          class="form-control"
+          type="text"
+          name="ba"
+          placeholder="Bacteria"
+        /><br><br>
+
+        <label for="Bgr">Bgr</label><br />
+        <input
+          style="border: 1px solid black"
+          class="form-control"
+          type="text"
+          name="bgr"
+          placeholder="bgr"
+        /><br><br>
+
+        <label for="Bu">Blood Urea</label><br />
+        <input
+          style="border: 1px solid black"
+          class="form-control"
+          type="text"
+          name="bu"
+          placeholder="Blood Urea"
+        /><br><br>
+
+        <label for="sc">Serum Creatinine</label><br />
+        <input
+          style="border: 1px solid black"
+          class="form-control"
+          type="text"
+          name="sc"
+          placeholder="Serum Creatinine"
+        /><br><br>
+
+        <label for="pot">Pottasium</label><br />
+        <input
+          style="border: 1px solid black"
+          class="form-control"
+          type="text"
+          name="pot"
+          placeholder="Pottasium"
+        /><br><br>
+
+        <label for="wc">White Blood Cells</label
+        ><br />
+        <input
+          style="border: 1px solid black"
+          class="form-control"
+          type="text"
+          name="wc"
+          placeholder="WBC"
+        /><br><br>
+
+        <label for="htn">Hypertension</label
+        ><br /><input
+          style="border: 1px solid black"
+          class="form-control"
+          type="text"
+          name="htn"
+          placeholder="Hypertension"
+        /><br><br>
+
+        <label for="dm">Diabetes Mellitus</label
+        ><br /><input
+          style="border: 1px solid black"
+          class="form-control"
+          type="text"
+          name="dm"
+          placeholder="Diabetes Mellitus"
+        /><br><br>
+
+        <label for="cad">Coronary Artery Disease</label
+        ><br /><input
+          style="border: 1px solid black"
+          class="form-control"
+          type="text"
+          name="cad"
+          placeholder="CAD"
+        /><br><br>
+
+        <label for="pe">Pedal Edema</label
+        ><br /><input
+          style="border: 1px solid black"
+          class="form-control"
+          type="text"
+          name="pe"
+          placeholder="Pedal Edema"
+        /><br><br>
+
+        <label for="ane">Anemia</label</label
+        ><br /><input
+        style="border: 1px solid black"
+        class="form-control"
+        type="text"
+        name="ane"
+        placeholder="Anemia" /><br><br>
+        
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">
+          Predict
+        </button>
+      </form>
+      <br />
+      <br />
+      <strong  style='color:blue'>{{predicted}}</strong>
+      <br />
+      <br />
+      <a href="http://127.0.0.1:5000/">Go to Home Page</a>
+      <br />
+    </div>
+    <br>
+  </body>
+</html>

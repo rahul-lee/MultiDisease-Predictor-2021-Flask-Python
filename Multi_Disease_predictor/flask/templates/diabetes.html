@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Diabetes Predictor</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Arimo"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Hind:300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+  </head>
+
+  <body>
+    <div class="login">
+      <h1>Diabetes Predictor</h1>
+
+      <form action="{{ url_for('predictPage')}}" method="post">
+        <label for="Glucose Level">Glucose Level</label>
+        <input
+          type="text"
+          name="Glucose Level"
+          placeholder="Plasma Glucose after 2hrs in Oral Glucose tolerance test"
+          required="required"
+        />
+
+        <label for="Insulin">Insulin</label>
+        <input
+          type="text"
+          name="Insulin"
+          placeholder="2-Hour serum Insulin (mu U/ml)"
+          required="required"
+        />
+
+        <label for="BMI">BMI</label>
+        <input
+          type="text"
+          name="BMI"
+          placeholder="Body Mass Index (Weight in kg/(Height in m)^2)"
+          required="required"
+        />
+
+        <label for="age">Age</label>
+        <input
+          type="text"
+          name="Age"
+          placeholder="Age (Years)"
+          required="required"
+        />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">
+          Predict
+        </button>
+      </form>
+      <br />
+      <strong style="color: blue">{{pred}}</strong>
+      <br />
+      <br />
+      <a href="http://127.0.0.1:5000/">Go to Home Page</a>
+
+      <br />
+    </div>
+  </body>
+</html>
